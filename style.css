@@ -1,0 +1,106 @@
+ :root {
+  --wine: #4b1831;
+  --wine-dark: #2d0d20;
+  --rose: #b76e79;
+  --blush: #f7e9e5;
+  --cream: #fffaf5;
+  --gold: #d9b779;
+  --text: #573346;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; color: var(--text); background: var(--cream);
+  font-family: "Poppins", sans-serif; font-weight: 300;
+}
+.hero {
+  min-height: 100vh; position: relative; overflow: hidden; color: #fff8f1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 90px 24px 60px;
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(160,76,105,.36), transparent 55%),
+    linear-gradient(135deg, #2b0d20, #5a1d3a 55%, #321126);
+}
+.hero::before, .hero::after {
+  content: ""; position: absolute; width: 320px; height: 320px; border: 1px solid rgba(217,183,121,.22);
+  border-radius: 50%; pointer-events: none;
+}
+.hero::before { left: -150px; top: 15%; }
+.hero::after { right: -160px; bottom: 5%; width: 420px; height: 420px; }
+.nav { position: absolute; top: 0; left: 0; width: 100%; padding: 24px 7%; display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+.brand { color: white; text-decoration: none; font-family: "Playfair Display", serif; font-size: 24px; }
+.brand span { color: var(--gold); font-size: 17px; }
+.nav-link { color: #f5dfe4; text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+.hero-content { max-width: 850px; position: relative; z-index: 1; }
+.eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--rose); font-weight: 500; }
+.hero .eyebrow { color: #e5c58e; }
+h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 400; }
+h1 { font-size: clamp(64px, 12vw, 130px); line-height: 1.05; margin: 25px 0 12px; letter-spacing: -3px; }
+.amp { color: var(--gold); font-family: "Great Vibes", cursive; font-size: .8em; }
+.hero-subtitle { font-family: "Great Vibes", cursive; font-size: clamp(25px, 4vw, 39px); color: #f1d6dc; margin: 0 0 30px; }
+.date-pill { display: inline-block; border: 1px solid rgba(217,183,121,.65); padding: 12px 23px; letter-spacing: 3px; font-size: 11px; margin-bottom: 30px; }
+.primary-button { display: block; width: fit-content; margin: 0 auto; padding: 13px 25px; border-radius: 30px; background: var(--gold); color: var(--wine-dark); text-decoration: none; font-size: 11px; letter-spacing: 1px; transition: transform .25s, background .25s; }
+.primary-button:hover { transform: translateY(-3px); background: #f0d49d; }
+.primary-button span { margin-left: 8px; }
+.scroll-hint { margin-top: 55px; font-size: 9px; letter-spacing: 2px; color: #d9b9c6; }
+.scroll-hint span { display: block; font-size: 20px; margin-top: 8px; }
+.hero-bottom { position: absolute; bottom: 22px; font-size: 9px; letter-spacing: 3px; color: #d7b9c4; }
+.section { padding: 105px 22px; text-align: center; }
+.section h2, .countdown-section h2 { font-size: clamp(34px, 5vw, 54px); line-height: 1.2; margin: 16px 0 30px; color: var(--wine); }
+.section h2 span, .countdown-section h2 span { color: var(--rose); font-style: italic; }
+.countdown-section { text-align: center; padding: 85px 20px; background: #f5e7e3; }
+.countdown { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.time-box { min-width: 90px; padding: 20px 15px; border: 1px solid #d7b2b5; background: rgba(255,255,255,.42); }
+.time-box strong { display: block; font-family: "Playfair Display", serif; font-size: 38px; color: var(--wine); font-weight: 400; }
+.time-box span { font-size: 9px; text-transform: uppercase; letter-spacing: 2px; color: var(--rose); }
+.countdown-note { font-family: "Great Vibes", cursive; font-size: 25px; color: var(--rose); margin-top: 27px; }
+.invitation { background: var(--cream); }
+.section-flower { color: var(--gold); font-size: 27px; margin-bottom: 24px; }
+.invitation h2 { margin-bottom: 24px; }
+.invitation-copy { max-width: 590px; margin: 0 auto; line-height: 2; font-size: 13px; color: #806674; }
+.invitation-copy strong { color: var(--wine); font-weight: 500; }
+.names-script { font-family: "Great Vibes", cursive; font-size: clamp(48px, 8vw, 80px); color: var(--rose); margin: 35px 0 25px; }
+.names-script span { color: var(--gold); font-size: .7em; }
+.wedding-date { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--wine); }
+.wedding-date strong { font-family: "Playfair Display", serif; font-size: 72px; font-weight: 400; line-height: 1; }
+.wedding-date span { font-size: 10px; letter-spacing: 3px; }
+.event-time { margin-top: 24px; font-size: 13px; }
+.venue-note { font-size: 11px; color: var(--rose); }
+.story { background: #f7ece8; }
+.story-card { max-width: 650px; margin: 0 auto; padding: 42px 35px; background: rgba(255,255,255,.58); border: 1px solid #ead4d0; }
+.story-heart { color: var(--rose); font-size: 34px; }
+.story-card p { font-family: "Playfair Display", serif; font-size: 19px; line-height: 1.9; color: #765265; }
+.story-card .story-signature { font-family: "Great Vibes", cursive; font-size: 30px; color: var(--rose); }
+.details { background: var(--cream); }
+.details-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 900px; margin: 40px auto 0; }
+.detail-card { padding: 32px 18px; border: 1px solid #ead8d1; background: white; }
+.detail-icon { color: var(--rose); font-size: 25px; }
+.detail-card h3 { color: var(--wine); font-size: 23px; margin: 14px 0; }
+.detail-card p { font-size: 11px; line-height: 1.8; color: #967d8a; margin: 5px 0; }
+.closing { padding: 105px 24px; text-align: center; color: #fff5ef; background: linear-gradient(140deg, #2d0d20, #5a1d3a); }
+.closing h2 { font-size: clamp(48px, 8vw, 82px); line-height: 1.1; margin: 25px 0; }
+.closing h2 span { color: #e4bd82; font-style: italic; }
+.closing-content > p:not(.eyebrow):not(.closing-date) { max-width: 460px; margin: 0 auto; line-height: 1.8; font-size: 13px; color: #e6cbd5; }
+.closing-names { font-family: "Great Vibes", cursive; font-size: 48px; color: #f4d9df; margin-top: 35px; }
+.closing-names span { color: var(--gold); font-size: 25px; }
+.closing-date { letter-spacing: 4px; font-size: 11px; color: #d8b67f; }
+footer { text-align: center; padding: 28px 18px; font-size: 11px; color: #987d8a; }
+footer span { color: var(--rose); }
+footer p { font-size: 10px; }
+.music-button { position: fixed; right: 20px; bottom: 20px; width: 48px; height: 48px; border: 1px solid #e3c58e; border-radius: 50%; background: var(--wine); color: #f8e3b9; font-size: 23px; cursor: pointer; z-index: 5; box-shadow: 0 5px 20px #3b15272b; }
+.music-button.playing { animation: pulse 1.5s infinite; }
+.petal { position: fixed; top: -20px; z-index: 4; pointer-events: none; color: #d99aa9; animation: fall linear forwards; opacity: .7; }
+@keyframes fall { to { transform: translateY(110vh) rotate(600deg); opacity: 0; } }
+@keyframes pulse { 50% { box-shadow: 0 0 0 8px #b76e7928; } }
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 650px) {
+  .nav { padding: 20px 6%; }
+  .nav-link { font-size: 8px; letter-spacing: 1px; }
+  .section { padding: 75px 18px; }
+  .details-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .story-card { padding: 30px 22px; }
+  .story-card p { font-size: 16px; }
+  .time-box { min-width: 72px; padding: 15px 10px; }
+  .time-box strong { font-size: 30px; }
+}
